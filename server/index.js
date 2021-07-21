@@ -3,6 +3,7 @@ const cors = require("cors"); //Connects resources across domains
 
 const app = express(); //Takes express library and runs it
 const pool = require("./db"); //Using pool to write queries w/ postgres https://stackoverflow.com/questions/56352974/what-is-the-difference-between-pool-query-and-client-query-with-the-node-pg-libr
+const PORT = process.env.PORT || 5000
 
 //Creates middleware
 app.use(cors());
