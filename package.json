@@ -1,7 +1,7 @@
 {
-  "scripts": {
-    "start": "node ./client/src/components/index.js"
-  },
+  // "scripts": {
+  //   "start": "node ./client/src/components/index.js"
+  // },
 
   "dependencies": {
     "cors": "^2.8.5",
