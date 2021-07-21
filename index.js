@@ -9,6 +9,8 @@ const path = require("path");
 //Creates middleware
 app.use(cors());
 app.use(express.json());  //Gets data from client side by giving access to req.body/JSON data
+app.use(express.static("./client/build")); //pointing to build folder
+
 
 //Routes
 
@@ -77,5 +79,5 @@ app.delete("/todos/:id", async(req, res) => {
 
 //Starts service by listening to port
 app.listen(PORT, () => {
-    console.log(`Server has started on port ${PORT}`);
+    console.log(`Server is starting on port ${PORT}`);
 });
