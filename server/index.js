@@ -47,13 +47,13 @@ app.get("/todos/:id", async(req, res) => { //:id allows URL to be dynamic
     }
 })
 
-//Update todo
+//Edit todo
 app.put("/todos/:id", async(req, res) => {
     try {
         const {id} = req.params;
         const {task} = req.body; //Changes the task name to what's specified in request
 
-        const upTodo = await pool.query("UPDATE todo SET task = $1 WHERE todo_id = $2", [task, id]);
+        const editTodo = await pool.query("UPDATE todo SET task = $1 WHERE todo_id = $2", [task, id]);
         res.json("Succesfully Updated Task")
     } catch (err) {
         console.error(err.message)
